@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        // Início
-        let operacao = 73;
-        localStorage.setItem("1", 73);
-        // Multiplicação
-        operacao *= 77;
-        localStorage.setItem("3", 77);
-        // Divisão
-        operacao /= 59;
-        localStorage.setItem("5", 59);
-        // Soma
-        operacao += 99;
-        localStorage.setItem("2", 99);
-        // Subtração
-        operacao -= 81;
-        localStorage.setItem("4", 81);
-    </script>
-</body>
+      // Início
+      let operacao = 73;
+      localStorage.setItem("1", 73);
+      // Multiplicação
+      operacao *= 77;
+      localStorage.setItem("3", 77);
+      // Divisão
+      operacao /= 59;
+      localStorage.setItem("5", 59);
+      // Soma
+      operacao += 99;
+      localStorage.setItem("2", 99);
+      // Subtração
+      operacao -= 81;
+      localStorage.setItem("4", 81);
+      // Apresentação
+      let resultado =
+        ((parseInt(localStorage.getItem("1")) +
+          parseInt(localStorage.getItem("2"))) *
+          parseInt(localStorage.getItem("3")) -
+          parseInt(localStorage.getItem("4"))) /
+        parseInt(localStorage.getItem("5"));
 
+      alert(`O Resultado das suas mesclagens é ${operacao.toFixed(2)}\n
+O resultado esperado para as mesclagens é ${resultado.toFixed(2)}`);
+    </script>
+  </body>
 </html>
